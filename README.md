@@ -45,6 +45,3 @@ python -m wincachesweep --clean --safe-only
 ## Requirements
 
 Python 3.8+ (Windows recommended for full directory detection).
-
----
-_This project was scaffolded with the help of an AI agent._
