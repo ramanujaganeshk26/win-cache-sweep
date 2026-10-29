@@ -1,11 +1,10 @@
 """Core scanner for Windows temporary files, crash dumps, and large file analysis."""
 
 import os
-import shutil
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 
 @dataclass
@@ -36,8 +35,7 @@ class ScanReport:
 
 
 class DiskScanner:
-    def __init__(self, min_large_file_mb: float = 100.0, stale_days: int = 14):
-        self.min_large_file_mb = min_large_file_mb
+    def __init__(self, stale_days: int = 14):
         self.stale_days = stale_days
 
     @staticmethod
